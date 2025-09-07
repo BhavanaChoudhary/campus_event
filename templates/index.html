@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Event Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🎓 Campus Event Management Platform</h1>
+        <nav>
+            <a href="/admin">Admin Portal</a>
+            <a href="/student">Student Portal</a>
+            <a href="#reports">Reports</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to Campus Events</h2>
+            <p>Manage events, track attendance, and generate insightful reports</p>
+        </section>
+
+        <section id="features">
+            <div class="feature-card">
+                <h3>📅 Event Management</h3>
+                <p>Create and manage campus events with ease</p>
+            </div>
+            <div class="feature-card">
+                <h3>👥 Student Registration</h3>
+                <p>Simple registration process for students</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Analytics & Reports</h3>
+                <p>Comprehensive reporting and analytics</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

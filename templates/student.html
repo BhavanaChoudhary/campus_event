@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Portal - Campus Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>👨‍🎓 Student Portal</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#browse-events">Browse Events</a>
+            <a href="#my-registrations">My Registrations</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="browse-events">
+            <h2>Available Events</h2>
+            <div>
+                <label for="collegeIdFilter">College ID:</label>
+                <input type="number" id="collegeIdFilter" value="1" />
+                <label for="eventTypeFilter">Event Type:</label>
+                <select id="eventTypeFilter">
+                    <option value="">All</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Fest">Fest</option>
+                    <option value="Tech Talk">Tech Talk</option>
+                </select>
+                <button onclick="loadEvents()">Filter</button>
+            </div>
+            <div id="eventsList"></div>
+        </section>
+
+        <section id="my-registrations">
+            <h2>My Registrations</h2>
+            <label for="studentIdInput">Student ID:</label>
+            <input type="number" id="studentIdInput" />
+            <button onclick="loadRegistrations()">Load Registrations</button>
+            <div id="registrationsList"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
